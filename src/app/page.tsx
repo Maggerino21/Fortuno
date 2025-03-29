@@ -15,12 +15,12 @@ export default function Home() {
       <div className="dashboard-grid">
         {/* Left Column */}
         <div className="dashboard-item">
-          <NetWorthSection />
+          <NetWorthDistributionSection />
         </div>
         
         {/* Middle Column */}
         <div className="distribution-item">
-          <NetWorthDistributionSection />
+          <NetWorthSection />
         </div>
         
         {/* Right Column */}

@@ -30,13 +30,14 @@ const NetWorthSection: React.FC = () => {
     <div className="net-worth-container">
       <h2 className="section-title">Your Net Worth</h2>
       
-      <div className="net-worth-value">
-        $<CountingNumber 
-          value={netWorth} 
-          start={prevNetWorth} 
-          duration={1500} 
-        />
-      </div>
+    <div className="net-worth-value">
+      <CountingNumber 
+        value={netWorth} 
+        start={prevNetWorth} 
+        duration={1500} 
+        prefix="$"
+      />
+    </div>
       
       <div className="change-indicator">
         <span className="text-success">
