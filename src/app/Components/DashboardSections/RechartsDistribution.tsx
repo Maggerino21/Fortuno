@@ -25,7 +25,8 @@ const RechartsDistribution = () => {
     { name: 'Real Estate', value: 40 },
     { name: 'Investments', value: 30 },
     { name: 'Cash', value: 15 },
-    { name: 'Other Assets', value: 15 }
+    { name: 'Other Assets', value: 15 },
+
   ];
 
   // Active shape for hover effect
