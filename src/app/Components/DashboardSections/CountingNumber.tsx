@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState, useEffect } from 'react';
 
 interface CountingNumberProps {
@@ -5,13 +7,15 @@ interface CountingNumberProps {
   duration?: number;
   start?: number;
   prefix?: string;
+  renderWithSpans?: boolean;
 }
 
 const CountingNumber: React.FC<CountingNumberProps> = ({ 
   value = 0, 
   duration = 1000, 
   start = 0,
-  prefix = ''
+  prefix = '',
+  renderWithSpans = false
 }) => {
   const [displayValue, setDisplayValue] = useState(start);
   
@@ -43,7 +47,20 @@ const CountingNumber: React.FC<CountingNumberProps> = ({
     };
   }, [value, duration, start]);
 
-  return <span>{prefix}{displayValue.toLocaleString()}</span>;
+  // Format the number with commas
+  const formattedValue = displayValue.toLocaleString();
+  
+  // Add the prefix and render with spans if requested
+  if (renderWithSpans) {
+    // Split the string into individual characters and wrap each in a span
+    const textWithSpans = (prefix + formattedValue).split('').map((char, index) => (
+      <span key={index} style={{ display: 'inline-block' }}>{char}</span>
+    ));
+    
+    return <>{textWithSpans}</>;
+  } else {
+    return <>{prefix}{formattedValue}</>;
+  }
 };
 
 export default CountingNumber;

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import CountingNumber from './CountingNumber';
+import NetWorthChart from './NetWorthChart';
 
 const NetWorthSection: React.FC = () => {
   // Mock data for net worth
@@ -45,6 +46,7 @@ const NetWorthSection: React.FC = () => {
         </span>
         <span className="period-label">this month</span>
       </div>
+      <NetWorthChart/>
     </div>
   );
 };

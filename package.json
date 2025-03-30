@@ -15,7 +15,9 @@
     "react-dom": "^18.2.0",
     "react-native": "^0.72.6",
     "react-native-web": "^0.19.9",
-    "tamagui": "^1.125.28"
+    "recharts": "^2.15.1",
+    "tamagui": "^1.125.28",
+    "victory": "^37.3.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
