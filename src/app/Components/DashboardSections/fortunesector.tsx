@@ -50,5 +50,4 @@ const NetWorthSection: React.FC = () => {
     </div>
   );
 };
-
 export default NetWorthSection;

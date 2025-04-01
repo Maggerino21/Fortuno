@@ -47,7 +47,7 @@ const NetWorthChart: React.FC = () => {
 
   return (
     <div className="net-worth-chart">
-      <h3 className="chart-title">Net Worth Growth</h3>
+      <h3 className="chart-title">Growth</h3>
       
       <div className="chart-container">
         <ResponsiveContainer width="100%" height={180}>
