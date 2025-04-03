@@ -10,10 +10,9 @@ const RechartsComponent = dynamic(
 
 const NetWorthDistributionSection: React.FC = () => {
   return (
-    <div className="distribution-container">
-      <h2 className="section-title">Distribution</h2>
-      
-      <div className="pie-chart" style={{ height: 300, width: '100%' }}>
+    <div className="flex flex-col h-full">
+      <h2 className="text-xl font-semibold mb-4">Distribution</h2>
+      <div className="flex-grow">
         <RechartsComponent />
       </div>
     </div>

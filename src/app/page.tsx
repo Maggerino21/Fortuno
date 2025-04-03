@@ -19,7 +19,7 @@ export default function Home() {
         </div>
         
         {/* Middle Column */}
-        <div className="distribution-item">
+        <div className="dashboard-item">
           <NetWorthSection />
         </div>
         
