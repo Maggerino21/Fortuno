@@ -40,12 +40,12 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background-image: url('/blurryahh.jpg');*/
+  background-image: url('/blurryahh.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   filter: blur(8px); /* Reduced blur amount */
-  opacity: 0.5; /* Reduced opacity significantly */
+  opacity: 0.3; /* Reduced opacity significantly */
   z-index: -1;
   pointer-events: none;
 }
