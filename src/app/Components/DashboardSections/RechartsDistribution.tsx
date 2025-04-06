@@ -14,10 +14,11 @@ const RechartsDistribution = () => {
 
   // Colors that match the holographic gradient style
   const COLORS = [
-    '#6366f1', // Indigo
-    '#8b5cf6', // Purple
-    '#ec4899', // Pink
-    '#14b8a6', // Teal
+    '#c7d2fe', // Very light indigo
+    '#ddd6fe', // Very light purple
+    '#fbcfe8', // Very light pink
+    '#bae6fd', // Very light blue
+    '#d1fae5', // Very light teal
   ];
 
   // Mock data for net worth distribution

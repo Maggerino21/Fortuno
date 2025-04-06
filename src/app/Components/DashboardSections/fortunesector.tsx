@@ -30,7 +30,7 @@ const NetWorthSection: React.FC = () => {
   return (
     <div className="net-worth-container">
       <h2 className="section-title">Your Net Worth</h2>
-      
+    
     <div className="net-worth-value">
       <CountingNumber 
         value={netWorth} 

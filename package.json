@@ -9,11 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
     "next": "^15.2.4",
     "next-transpile-modules": "^10.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-native": "^0.72.6",
+    "react-native-vector-icons": "^10.2.0",
     "react-native-web": "^0.19.9",
     "recharts": "^2.15.1",
     "tamagui": "^1.125.28",

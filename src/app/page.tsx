@@ -2,8 +2,8 @@ import React from 'react';
 import NetWorthSection from './Components/DashboardSections/fortunesector';
 import NetWorthDistributionSection from './Components/DashboardSections/distributionsector';
 import UserGreeting from './Components/usergreeting';
+import StatisticsSection from './Components/DashboardSections/StatisticsSection';
 
-const AssetsLiabilitiesSection = () => <div className='dashboard-section'></div>;
 
 export default function Home() {
   const username = "Dexter";
@@ -25,7 +25,7 @@ export default function Home() {
         
         {/* Right Column */}
         <div className="dashboard-item">
-          <AssetsLiabilitiesSection />
+          <StatisticsSection />
         </div>
       </div>
     </main>

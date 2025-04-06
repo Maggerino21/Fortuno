@@ -1,8 +1,9 @@
 "use client"
 import React from 'react';
 import dynamic from 'next/dynamic';
+import DistributionList from './DistributionList';
 
-// Import the entire Recharts library with no SSR
+// Import the Recharts component with no SSR
 const RechartsComponent = dynamic(
   () => import('./RechartsDistribution'),
   { ssr: false }
@@ -10,11 +11,14 @@ const RechartsComponent = dynamic(
 
 const NetWorthDistributionSection: React.FC = () => {
   return (
-    <div className="flex flex-col h-full">
-      <h2 className="text-xl font-semibold mb-4">Distribution</h2>
+    <div className="dashboard-section">
+      <h2 className="section-title">Distribution</h2>
       <div className="flex-grow">
         <RechartsComponent />
       </div>
+    
+    <DistributionList />
+
     </div>
   );
 };
