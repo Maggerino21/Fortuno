@@ -1,38 +1,18 @@
 {
-  "name": "fintech-app",
+  "name": "fortuno",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^7.0.1",
-    "@mui/material": "^7.0.1",
-    "@supabase/gotrue-js": "^2.69.1",
-    "@supabase/supabase-js": "^2.49.4",
-    "next": "^15.2.4",
-    "next-transpile-modules": "^10.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-native": "^0.72.6",
-    "react-native-vector-icons": "^10.2.0",
-    "react-native-web": "^0.19.9",
-    "recharts": "^2.15.1",
-    "tamagui": "^1.125.28",
-    "victory": "^37.3.6"
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/node": "^20.17.27",
-    "@types/react": "^19.0.12",
-    "@types/react-dom": "^19.0.4",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "typescript": "^5.8.2"
+    "turbo": "^1.10.0"
   }
 }

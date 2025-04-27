@@ -16,9 +16,6 @@ const NetWorthDistributionSection: React.FC = () => {
       <div className="flex-grow">
         <RechartsComponent />
       </div>
-    
-    <DistributionList />
-
     </div>
   );
 };
