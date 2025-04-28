@@ -1,9 +1,9 @@
 import React from 'react';
+import TopBar from './Components/IndexSections/topBar';
 
-const LandingPage: React.FC = () => {
+const Index: React.FC = () => {
   return (
-    <div>h</div>
-  );
+    <TopBar></TopBar> );
 };
 
-export default LandingPage;
+export default Index;

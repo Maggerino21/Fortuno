@@ -470,3 +470,47 @@ a {
   font-weight: 600;
   margin: 0;
 }
+
+/* =========== NAVBAR =========== */
+.navbar {
+  position: fixed;
+  top: 10px; /* Add distance from the top */
+  right: 10px; /* Add distance from the right */
+  left: 10px; /* Add distance from the left */
+  width: calc(100% - 20px); /* Adjust width to account for the left and right spacing */
+  background-color: transparent;
+  padding: 10px 20px; /* Add internal padding for spacing inside the navbar */
+  z-index: 1000;
+  display: flex; /* Use flexbox for layout */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center items */
+  transition: background-color 0.2s ease, opacity 0.7s ease;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: flex-end; /* Align list items to the right */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar .MuiButton-root.navbar-button {
+  font-family: 'Manrope';
+  color: var(--text-tertiary);
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  transition: color 0.4s ease, opacity 0.7s ease;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+  color: white;
+}
