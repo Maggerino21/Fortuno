@@ -1,8 +1,8 @@
 import React from 'react';
-import NetWorthSection from './Components/DashboardSections/fortunesector';
-import NetWorthDistributionSection from './Components/DashboardSections/distributionsector';
-import UserGreeting from './Components/usergreeting';
-import StatisticsSection from './Components/DashboardSections/StatisticsSection';
+import NetWorthSection from '../Components/DashboardSections/fortunesector';
+import NetWorthDistributionSection from '../Components/DashboardSections/distributionsector';
+import UserGreeting from '../Components/usergreeting';
+import StatisticsSection from '../Components/DashboardSections/StatisticsSection';
 
 
 export default function Home() {
