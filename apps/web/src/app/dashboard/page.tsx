@@ -1,11 +1,11 @@
+// apps/web/src/app/dashboard/page.tsx
 import React from 'react';
 import NetWorthSection from '../Components/DashboardSections/fortunesector';
 import NetWorthDistributionSection from '../Components/DashboardSections/distributionsector';
 import UserGreeting from '../Components/usergreeting';
 import StatisticsSection from '../Components/DashboardSections/StatisticsSection';
 
-
-export default function Home() {
+export default function Dashboard() {
   const username = "Dexter";
   
   return (
