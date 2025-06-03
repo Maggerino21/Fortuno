@@ -1,45 +1,33 @@
 // apps/web/src/app/ClientProviders.tsx
 "use client";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import { AuthProvider } from "./contexts/AuthContext";
-
-// Create theme using the standard Material-UI approach
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-    background: {
-      default: '#fafafa',
-      paper: '#ffffff',
-    },
-    divider: 'rgba(0, 0, 0, 0.12)',
-  },
-  typography: {
-    fontFamily: '"Manrope", "Roboto", "Helvetica", "Arial", sans-serif',
-  },
-  shape: {
-    borderRadius: 8,
-  },
-  components: {
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: 'none',
-        },
-      },
-    },
-  },
-});
+import { fortunoTheme, themeColors } from "./theme"; // Import from theme/index.ts
+import { useEffect } from "react";
 
 export default function ClientProviders({ children }: { children: React.ReactNode }) {
+  // Sync MUI theme colors with CSS custom properties for non-MUI components
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // Update CSS custom properties to match MUI theme
+    root.style.setProperty('--primary-color', themeColors.primary);
+    root.style.setProperty('--primary-light', themeColors.primaryLight);
+    root.style.setProperty('--primary-dark', themeColors.primaryDark);
+    root.style.setProperty('--secondary-color', themeColors.secondary);
+    root.style.setProperty('--success-color', themeColors.success);
+    root.style.setProperty('--error-color', themeColors.error);
+    root.style.setProperty('--background-color', themeColors.background);
+    root.style.setProperty('--card-color', themeColors.cardColor);
+    root.style.setProperty('--text-color', themeColors.textPrimary);
+    root.style.setProperty('--text-secondary', themeColors.textSecondary);
+    root.style.setProperty('--border-color', themeColors.borderColor);
+    root.style.setProperty('--text-tertiary', themeColors.primary); // For username highlighting
+  }, []);
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={fortunoTheme}>
       <CssBaseline />
       <AuthProvider>
         {children}

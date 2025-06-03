@@ -1,275 +1,127 @@
 // apps/web/src/app/theme/index.ts
-import { extendTheme } from '@mui/material/styles';
+import { createTheme, alpha } from "@mui/material/styles";
 
-// Define your brand colors and design tokens
-export const designTokens = {
-  colors: {
+export const fortunoTheme = createTheme({
+  palette: {
+    mode: 'light',
     primary: {
-      50: '#f0f9ff',
-      100: '#e0f2fe',
-      200: '#bae6fd',
-      300: '#7dd3fc',
-      400: '#38bdf8',
-      500: '#0ea5e9', // Main primary
-      600: '#0284c7',
-      700: '#0369a1',
-      800: '#075985',
-      900: '#0c4a6e',
+      main: '#059669', // Money green
+      light: '#10b981',
+      dark: '#047857',
+      contrastText: '#ffffff',
+    },
+    secondary: {
+      main: '#0f766e', // Teal
+      light: '#14b8a6',
+      dark: '#0d9488',
+      contrastText: '#ffffff',
     },
     success: {
-      50: '#f0fdf4',
-      100: '#dcfce7',
-      200: '#bbf7d0',
-      300: '#86efac',
-      400: '#4ade80',
-      500: '#22c55e', // Main success
-      600: '#16a34a',
-      700: '#15803d',
-      800: '#166534',
-      900: '#14532d',
+      main: '#22c55e',
+      light: '#4ade80',
+      dark: '#16a34a',
     },
     error: {
-      50: '#fef2f2',
-      100: '#fee2e2',
-      200: '#fecaca',
-      300: '#fca5a5',
-      400: '#f87171',
-      500: '#ef4444', // Main error
-      600: '#dc2626',
-      700: '#b91c1c',
-      800: '#991b1b',
-      900: '#7f1d1d',
+      main: '#ef4444',
+      light: '#f87171',
+      dark: '#dc2626',
     },
-    neutral: {
-      50: '#fafafa',
-      100: '#f5f5f5',
-      200: '#e5e5e5',
-      300: '#d4d4d4',
-      400: '#a3a3a3',
-      500: '#737373',
-      600: '#525252',
-      700: '#404040',
-      800: '#262626',
-      900: '#171717',
+    background: {
+      default: '#f8fffe', // Very light mint
+      paper: '#ffffff',
     },
-    // Fortuno brand colors (financial/elegant theme)
-    fortune: {
-      50: '#f8fafc',
-      100: '#f1f5f9',
-      200: '#e2e8f0',
-      300: '#cbd5e1',
-      400: '#94a3b8',
-      500: '#64748b',
-      600: '#475569',
-      700: '#334155',
-      800: '#1e293b',
-      900: '#0f172a',
-    }
+    text: {
+      primary: '#1f2937',
+      secondary: '#6b7280',
+    },
+    divider: alpha('#059669', 0.12),
   },
   typography: {
-    fontFamily: {
-      primary: '"Manrope", system-ui, sans-serif',
-      display: '"Playfair Display", Georgia, serif',
-      mono: '"JetBrains Mono", "Fira Code", monospace',
+    fontFamily: '"Manrope", "Roboto", "Helvetica", "Arial", sans-serif',
+    h1: {
+      fontFamily: '"Playfair Display", "Times", serif',
+      fontWeight: 700,
+      fontSize: '3.5rem',
+      lineHeight: 1.1,
+      letterSpacing: '-0.02em',
     },
-    fontSize: {
-      xs: '0.75rem',
-      sm: '0.875rem',
-      base: '1rem',
-      lg: '1.125rem',
-      xl: '1.25rem',
-      '2xl': '1.5rem',
-      '3xl': '1.875rem',
-      '4xl': '2.25rem',
-      '5xl': '3rem',
-      '6xl': '3.75rem',
-      '7xl': '4.5rem',
-      '8xl': '6rem',
+    h2: {
+      fontFamily: '"Playfair Display", "Times", serif',
+      fontWeight: 600,
+      fontSize: '2.75rem',
+      lineHeight: 1.2,
+      letterSpacing: '-0.01em',
     },
-    lineHeight: {
-      tight: '1.25',
-      snug: '1.375',
-      normal: '1.5',
-      relaxed: '1.625',
-      loose: '2',
-    }
+    h3: {
+      fontWeight: 600,
+      fontSize: '2rem',
+      lineHeight: 1.3,
+    },
+    h4: {
+      fontWeight: 600,
+      fontSize: '1.5rem',
+      lineHeight: 1.4,
+    },
+    button: {
+      fontWeight: 600,
+      textTransform: 'none',
+    },
   },
-  spacing: {
-    xs: '0.25rem',
-    sm: '0.5rem',
-    md: '1rem',
-    lg: '1.5rem',
-    xl: '2rem',
-    '2xl': '3rem',
-    '3xl': '4rem',
+  shape: {
+    borderRadius: 12,
   },
-  borderRadius: {
-    sm: '0.25rem',
-    md: '0.375rem',
-    lg: '0.5rem',
-    xl: '0.75rem',
-    '2xl': '1rem',
-    full: '9999px',
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          textTransform: 'none',
+          fontWeight: 600,
+          padding: '12px 24px',
+        },
+        contained: {
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: '0 4px 12px rgba(5, 150, 105, 0.3)',
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 16,
+          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+          '&:hover': {
+            boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+          },
+          transition: 'box-shadow 0.3s ease-in-out',
+        },
+      },
+    },
+    MuiAppBar: {
+      styleOverrides: {
+        root: {
+          backgroundColor: 'transparent',
+          backdropFilter: 'blur(20px)',
+          borderBottom: `1px solid ${alpha('#059669', 0.12)}`,
+        },
+      },
+    },
   },
-  shadows: {
-    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
-    md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-    xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-    '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
-  }
+});
+
+// Export theme colors for CSS custom properties
+export const themeColors = {
+  primary: '#059669',
+  primaryLight: '#10b981',
+  primaryDark: '#047857',
+  secondary: '#0f766e',
+  success: '#22c55e',
+  error: '#ef4444',
+  background: '#f8fffe',
+  cardColor: '#ffffff',
+  textPrimary: '#1f2937',
+  textSecondary: '#6b7280',
+  borderColor: alpha('#059669', 0.12),
 };
-
-// Theme variants
-export type ThemeVariant = 'light' | 'dark' | 'fortune';
-
-// Create the MUI theme
-export const createFortunoTheme = (variant: ThemeVariant = 'light') => {
-  const isDark = variant === 'dark';
-  const isFortune = variant === 'fortune';
-
-  return extendTheme({
-    colorSchemes: {
-      light: {
-        palette: {
-          primary: {
-            main: designTokens.colors.primary[500],
-            light: designTokens.colors.primary[300],
-            dark: designTokens.colors.primary[700],
-            contrastText: '#ffffff',
-          },
-          secondary: {
-            main: designTokens.colors.fortune[600],
-            light: designTokens.colors.fortune[400],
-            dark: designTokens.colors.fortune[800],
-          },
-          success: {
-            main: designTokens.colors.success[500],
-            light: designTokens.colors.success[300],
-            dark: designTokens.colors.success[700],
-          },
-          error: {
-            main: designTokens.colors.error[500],
-            light: designTokens.colors.error[300],
-            dark: designTokens.colors.error[700],
-          },
-          background: {
-            default: '#fafafa',
-            paper: '#ffffff',
-          },
-          text: {
-            primary: designTokens.colors.neutral[800],
-            secondary: designTokens.colors.neutral[600],
-          },
-        },
-      },
-      dark: {
-        palette: {
-          primary: {
-            main: designTokens.colors.primary[400],
-            light: designTokens.colors.primary[200],
-            dark: designTokens.colors.primary[600],
-            contrastText: '#000000',
-          },
-          secondary: {
-            main: designTokens.colors.fortune[400],
-            light: designTokens.colors.fortune[300],
-            dark: designTokens.colors.fortune[600],
-          },
-          background: {
-            default: designTokens.colors.neutral[900],
-            paper: designTokens.colors.neutral[800],
-          },
-          text: {
-            primary: designTokens.colors.neutral[100],
-            secondary: designTokens.colors.neutral[300],
-          },
-        },
-      },
-    },
-    typography: {
-      fontFamily: designTokens.typography.fontFamily.primary,
-      h1: {
-        fontFamily: designTokens.typography.fontFamily.display,
-        fontSize: designTokens.typography.fontSize['4xl'],
-        fontWeight: 700,
-        lineHeight: designTokens.typography.lineHeight.tight,
-      },
-      h2: {
-        fontFamily: designTokens.typography.fontFamily.display,
-        fontSize: designTokens.typography.fontSize['3xl'],
-        fontWeight: 600,
-        lineHeight: designTokens.typography.lineHeight.tight,
-      },
-      h3: {
-        fontSize: designTokens.typography.fontSize['2xl'],
-        fontWeight: 600,
-        lineHeight: designTokens.typography.lineHeight.snug,
-      },
-      h4: {
-        fontSize: designTokens.typography.fontSize.xl,
-        fontWeight: 600,
-        lineHeight: designTokens.typography.lineHeight.snug,
-      },
-      h5: {
-        fontSize: designTokens.typography.fontSize.lg,
-        fontWeight: 600,
-        lineHeight: designTokens.typography.lineHeight.normal,
-      },
-      h6: {
-        fontSize: designTokens.typography.fontSize.base,
-        fontWeight: 600,
-        lineHeight: designTokens.typography.lineHeight.normal,
-      },
-      body1: {
-        fontSize: designTokens.typography.fontSize.base,
-        lineHeight: designTokens.typography.lineHeight.normal,
-      },
-      body2: {
-        fontSize: designTokens.typography.fontSize.sm,
-        lineHeight: designTokens.typography.lineHeight.normal,
-      },
-    },
-    components: {
-      MuiButton: {
-        styleOverrides: {
-          root: {
-            borderRadius: designTokens.borderRadius.md,
-            textTransform: 'none',
-            fontWeight: 600,
-            boxShadow: 'none',
-            '&:hover': {
-              boxShadow: designTokens.shadows.sm,
-            },
-          },
-          contained: {
-            '&:hover': {
-              boxShadow: designTokens.shadows.md,
-            },
-          },
-        },
-      },
-      MuiCard: {
-        styleOverrides: {
-          root: {
-            borderRadius: designTokens.borderRadius.xl,
-            boxShadow: designTokens.shadows.sm,
-            '&:hover': {
-              boxShadow: designTokens.shadows.md,
-            },
-          },
-        },
-      },
-      MuiPaper: {
-        styleOverrides: {
-          root: {
-            borderRadius: designTokens.borderRadius.lg,
-          },
-        },
-      },
-    },
-  });
-};
-
-export const fortunoTheme = createFortunoTheme('light');
-export const fortunoDarkTheme = createFortunoTheme('dark');
