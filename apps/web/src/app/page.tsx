@@ -98,12 +98,6 @@ const MarketingPage: React.FC = () => {
           <Grid container spacing={4} alignItems="center">
             <Grid size={{ xs: 12, md: 6 }}>
               <Box sx={{ mb: 3 }}>
-                <Chip 
-                  label="🚀 Now in Beta" 
-                  color="primary" 
-                  variant="outlined"
-                  sx={{ mb: 3 }}
-                />
                 <Typography 
                   variant="h1" 
                   component="h1" 
