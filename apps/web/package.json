@@ -1,5 +1,5 @@
 {
-  "name": "fintech-app",
+  "name": "fortuno/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -11,8 +11,6 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
-    "@mui/icons-material": "^7.0.1",
-    "@mui/material": "^7.0.1",
     "@supabase/gotrue-js": "^2.69.1",
     "@supabase/supabase-js": "^2.49.4",
     "next": "^15.2.4",
