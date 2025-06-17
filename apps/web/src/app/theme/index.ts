@@ -39,7 +39,7 @@ export const fortunoTheme = createTheme({
   typography: {
     fontFamily: '"Manrope", "Roboto", "Helvetica", "Arial", sans-serif',
     h1: {
-      fontFamily: '"Playfair Display", "Times", serif',
+      fontFamily: 'Roboto, sans-serif',
       fontWeight: 700,
       fontSize: '3.5rem',
       lineHeight: 1.1,

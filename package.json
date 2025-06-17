@@ -9,6 +9,8 @@
   ],
   "scripts": {
     "dev": "turbo run dev",
+    "dev:web": "turbo run dev --filter=@fortuno/web", 
+    "dev:mobile": "turbo run start --filter=@fortuno/mobile",
     "build": "turbo run build",
     "start": "turbo run start",
     "lint": "turbo run lint"

@@ -1,5 +1,5 @@
 {
-  "name": "fortuno/web",
+  "name": "@fortuno/web",
   "version": "0.1.0",
   "private": true,
   "scripts": {
